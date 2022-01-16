@@ -88,7 +88,7 @@ export default function UpdateCont({ setToken }) {
                     <button type="userButton">Update cont</button>
                 </div>
                 <div>
-                    <button type="userButton" onClick={deleteUser()}>Sterge cont</button>
+                    <button type="userButton" onClick={deleteUser}>Sterge cont</button>
                 </div>
             </form >
         </div >

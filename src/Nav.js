@@ -46,12 +46,12 @@ function Nav() {
                             <div class="dropdown">
                                 <button class="dropbtn-user"><BsPersonCircle /></button>
                                 <div class="dropdown-content toright">
-                                    <Link className="link-item" to={"/logare"} style={navStyleState[0]}>
+                                    {localStorage.length == 0 && <><Link className="link-item" to={"/logare"} style={navStyleState[0]}>
                                         <li>Autentifică</li>
                                     </Link>
-                                    <Link className="link-item" to={"/creeazaCont"} style={navStyleState[0]}>
-                                        <li>Creează cont</li>
-                                    </Link>
+                                        <Link className="link-item" to={"/creeazaCont"} style={navStyleState[0]}>
+                                            <li>Creează cont</li>
+                                        </Link></>}
                                     {
                                         localStorage.length && <Link className="link-item" to={"/"} onClick={e => {
                                             alert(localStorage.getItem('username') + " disconnected");
