@@ -1,37 +1,38 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-p{
+p {
   margin-top: 30px;
   margin-left: 20px;
   margin-right: 20px;
   text-align: left;
 }
 
- ul li{
-   text-align: left;
- }
+ul li {
+  text-align: left;
+}
 
- .dropbtn, .dropbtn-user {
+.dropbtn,
+.dropbtn-user {
   background-color: transparent;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   cursor: pointer;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,10 +49,9 @@ p{
   position: absolute;
   background-color: #f9f9f9;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
-
 
 .dropdown-content li {
   color: black;
@@ -64,7 +64,9 @@ p{
   transform: translateX(50px);
 }
 
-.dropdown-content li:hover {background-color: #f1f1f1}
+.dropdown-content li:hover {
+  background-color: #f1f1f1;
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
@@ -76,14 +78,19 @@ p{
   width: 100%;
 }
 
-.table-format td, .table-format th {
+.table-format td,
+.table-format th {
   border: 1px solid #ddd;
   padding: 8px;
 }
 
-.table-format tr:nth-child(even){background-color: #f2f2f2;}
+.table-format tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
 
-.table-format tr:hover {background-color: #ddd;}
+.table-format tr:hover {
+  background-color: #ddd;
+}
 
 .table-format th {
   padding-top: 12px;
@@ -98,7 +105,8 @@ p{
   align-items: center;
 }
 
-input[type=text], input[type=password] {
+input[type="text"],
+input[type="password"] {
   width: 100%;
   padding: 10px 20px;
   display: inline-block;
@@ -106,7 +114,7 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
 }
 
-button[type=submit]{
+button[type="submit"] {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
@@ -124,34 +132,33 @@ button[type=submit]{
   text-decoration: none;
   text-align: center;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   border-color: antiquewhite;
   color: #fff;
-  box-shadow: 0 0 40px 40px #8CB369 inset, 0 0 0 0 #8CB369;
+  box-shadow: 0 0 40px 40px #8cb369 inset, 0 0 0 0 #8cb369;
   transition: all 150ms ease-in-out;
 }
 
-button:hover[type=submit] {
-  box-shadow: 0 0 10px 0 #8CB369 inset, 0 0 10px 4px #8CB369;
-  color: #8CB369;
-} 
-
+button:hover[type="submit"] {
+  box-shadow: 0 0 10px 0 #8cb369 inset, 0 0 10px 4px #8cb369;
+  color: #8cb369;
+}
 
 .container-password {
   margin: 10px;
   padding: 16px;
-  background-color:#f1f1f1
+  background-color: #f1f1f1;
 }
 
 @media screen and (max-width: 300px) {
   span.psw {
-     display: block;
-     float: none;
+    display: block;
+    float: none;
   }
 }
 
-button[type=userButton]{
+button[type="userButton"] {
   box-sizing: border-box;
   appearance: none;
   background-color: transparent;
@@ -169,40 +176,84 @@ button[type=userButton]{
   padding: 1.2em 2em;
   text-decoration: none;
   text-transform: uppercase;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   border-color: antiquewhite;
   color: #fff;
-  box-shadow: 0 0 40px 40px #8CB369 inset, 0 0 0 0 #8CB369;
+  box-shadow: 0 0 40px 40px #8cb369 inset, 0 0 0 0 #8cb369;
   transition: all 150ms ease-in-out;
 }
 
-#logback{
+#logback {
   text-decoration: none;
   color: #fff;
 }
 
-#logback:hover{
-  color: #8CB369;
+#logback:hover {
+  color: #8cb369;
 }
 
 #logback a {
-  color: inherit
+  color: inherit;
 }
 
-button:hover[type=userButton] {
-  box-shadow: 0 0 10px 0 #8CB369 inset, 0 0 10px 4px #8CB369;
-  color: #8CB369;
-} 
+button:hover[type="userButton"] {
+  box-shadow: 0 0 10px 0 #8cb369 inset, 0 0 10px 4px #8cb369;
+  color: #8cb369;
+}
 
-svg{
+svg {
   font-size: 30px;
 }
 
-.dropbtn-user{
+.dropbtn-user {
   position: relative;
   right: -100px;
   display: inline-block;
 }
 
+.experienta-wrapper {
+  margin-left: 30%;
+  margin-right: 30%;
+}
 
+#butonExperienta {
+  box-sizing: border-box;
+  appearance: none;
+  background-color: transparent;
+  border-radius: 0.6em;
+  cursor: pointer;
+  display: inline-block;
+  align-self: center;
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  padding: 1.2em 2em;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  border-color: antiquewhite;
+  color: #fff;
+  box-shadow: 0 0 40px 40px #8cb369 inset, 0 0 0 0 #8cb369;
+  transition: all 150ms ease-in-out;
+}
+
+#butonExperienta:hover {
+  box-shadow: 0 0 10px 0 #8cb369 inset, 0 0 10px 4px #8cb369;
+  color: #8cb369;
+}
+
+textarea {
+  width: 100%;
+  max-width: 100%;
+}
+
+.input {
+  width: 100%;
+  height: 30px;
+}
