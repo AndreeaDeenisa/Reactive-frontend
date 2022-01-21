@@ -55,10 +55,6 @@ export default function Login({ setToken }) {
                 <div>
                     <button type="submit" >Autentifică</button>
                 </div>
-                <label>
-                    <input type="checkbox" checked="checked" name="remember" />
-                    Reține username și parolă.
-                </label>
                 <div class="container-password">
                     <span >Vrei să îți creezi un
                         <Link to={"/creeazaCont"}> cont nou?</Link>
