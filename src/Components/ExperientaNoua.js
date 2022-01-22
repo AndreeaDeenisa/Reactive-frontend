@@ -163,7 +163,7 @@ function ExperientaNoua() {
           />
         </label>
         <label>
-          <p>Durata calatorie</p>
+          <p>Durata calatorie (minute)</p>
           <input
             className="input"
             required
