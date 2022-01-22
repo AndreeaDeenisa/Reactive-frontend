@@ -24,7 +24,7 @@ export default function Login({ setToken }) {
         }
         else {
             console.log(res);
-            alert("error")
+            alert("Username incorect/parolă incorectă!")
         }
     }
     const navigate = useNavigate()
@@ -53,7 +53,7 @@ export default function Login({ setToken }) {
                     <input type="password" onChange={e => setPassword(e.target.value)} />
                 </label>
                 <div>
-                    <button type="submit" >Autentifică</button>
+                    <button type="submit">Autentifică</button>
                 </div>
                 <div class="container-password">
                     <span >Vrei să îți creezi un

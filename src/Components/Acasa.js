@@ -4,14 +4,13 @@ import { Typography } from "@material-ui/core";
 function Acasa() {
     return (
         <>
-            <h2>Partajati experiente din timpul utilizarii mijloacelor de transport</h2>
+            <h2>Partajați experiențe din timpul utilizării mijloacelor de transport</h2> <br></br><br></br>
+            <img id="acasa" src="logo2.png" />
+            <br></br>
             <Typography variant="h6"></Typography>
             <div>
-                <p>
-                    Această aplicație a fost creată de Oană Andreea Ramona, Oniga Andreea Denisa și Paraschivescu Ștefan, studenți ai Academiei de Studii Economice, în cadrul seminarului de tehnologii web.
-                </p>
-                <p>
-                    Aplicația oferă posibilitatea utilizatorilor să își împărtășească experiența din timpul călătoriei cu unul dintre mijloacele de transport în comun.
+                <p id="parag">
+                    Aplicația oferă posibilitatea utilizatorilor să își împărtășească experiența din timpul călătoriei cu unul dintre mijloacele de transport în comun. În timpul utilizării aplicației nu vor fi furnizate informații cu privire la identitatea utilizatorilor care au partajat experiențe. Scopul este de a identifica nemulțumirile apărute pe parcursul călătoriei pentru a le remedia.
                 </p>
                 <p>
                     Detaliile furnizate vor fi cu privire la:
@@ -27,9 +26,6 @@ function Acasa() {
                     </ul>
                 </p>
             </div>
-            {/* <div>
-                <img src={require('src\imagini\logo2.png')} />
-            </div> */}
         </>
     );
 }

@@ -17,14 +17,14 @@ async function createUser(credentials) {
             })
         })
         if (res.status == 200)
-            alert("Verifica mail-ul pentru activare")
+            alert("Verifica email-ul pentru activare")
         else {
             console.log(res);
-            alert("error")
+            alert("Username existent/ mail invalid/ parolă incorectă: minim 8 caractere(cel puțin 1 literă mare, 1 literă mică, 1 cifră, 1 caracter special)")
         }
     }
     else
-        alert('passwords don.t match');
+        alert('Parolele nu se potrivesc');
 
 }
 
@@ -44,10 +44,6 @@ export default function CreeazaCont({ setToken }) {
             cpassword
         });
     }
-
-    // const handleBack = async e => {
-    //     e.preventDefault();
-    // }
 
     return (
         <div className="login-wrapper">

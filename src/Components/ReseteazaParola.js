@@ -13,7 +13,7 @@ async function resetPassword(credentials) {
         })
     })
     if (res.status == 200)
-        alert("parola resetata")
+        alert("După validarea adresei de email, veți primi un email cu noua parolă.")
     else {
         console.log(res);
         alert("error")

@@ -23,14 +23,14 @@ async function changeUser(credentials) {
             body: JSON.stringify(obj)
         })
         if (res.status == 201)
-            alert("yey")
+            alert("Acțiune realizată cu succes!")
         else {
             console.log(res);
-            alert("error")
+            alert("Mail invalid/parolă incorectă: minim 8 caractere(cel puțin 1 literă mare, 1 literă mică, 1 cifră, 1 caracter special)")
         }
     }
     else
-        alert('passwords don.t match');
+        alert('Parolele nu se potrivesc');
 
 }
 
@@ -46,7 +46,7 @@ async function deleteUser(credentials) {
         })
     })
     if (res.status == 200)
-        alert("user deleted")
+        alert("Odată ce vă deconectați, contul va fi șters.")
     else {
         console.log(res);
         alert("error")
@@ -73,22 +73,22 @@ export default function UpdateCont({ setToken }) {
             <h1>Update cont</h1>
             <form onSubmit={handleSubmit}>
                 <label>
-                    <p>Schimba email</p>
+                    <p>Schimbă email</p>
                     <input type="text" onChange={e => setEmail(e.target.value)} />
                 </label>
                 <label>
-                    <p>Parolă noua</p>
+                    <p>Schimbă parola</p>
                     <input type="password" onChange={e => setPassword(e.target.value)} />
                 </label>
                 <label>
-                    <p>Confirmă parola noua</p>
+                    <p>Confirmă parola nouă</p>
                     <input type="password" onChange={e => setCPassword(e.target.value)} />
                 </label>
                 <div>
-                    <button type="userButton">Update cont</button>
+                    <button type="userButton">Actualizează cont</button>
                 </div>
                 <div>
-                    <button type="userButton" onClick={deleteUser}>Sterge cont</button>
+                    <button type="userButton" onClick={deleteUser}>Șterge cont</button>
                 </div>
             </form >
         </div >

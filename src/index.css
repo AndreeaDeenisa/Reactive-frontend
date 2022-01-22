@@ -138,6 +138,7 @@ button[type="submit"] {
   color: #fff;
   box-shadow: 0 0 40px 40px #8cb369 inset, 0 0 0 0 #8cb369;
   transition: all 150ms ease-in-out;
+  margin-left: 43px;
 }
 
 button:hover[type="submit"] {
@@ -294,5 +295,14 @@ textarea {
   background-color: #8cb369;
 }
 
+ 
+#acasa{
+  width: 300px;
+  height: 160px;
+}
+
+#parag{
+  text-indent: 50px;
+}
 
 
