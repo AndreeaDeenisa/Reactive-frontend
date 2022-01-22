@@ -85,7 +85,7 @@ function ExperientaNoua() {
 
   const [punctPlecare, setPunctPlecare] = React.useState();
   const [punctSosire, setPunctSosire] = React.useState();
-  const [tipTransport, setTipTransport] = React.useState("bus");
+  const [tipTransport, setTipTransport] = React.useState("Autobuz");
   const [dataPlecare, setDataPlecare] = React.useState();
   const [durataCalatorie, setDurataCalatorie] = React.useState();
   const [observatii, setObservatii] = React.useState();
@@ -141,7 +141,7 @@ function ExperientaNoua() {
           <select
             className="input"
             name="transport"
-            onChange={(e) => setTipTransport(e.target.value.toLowerCase())}
+            onChange={(e) => setTipTransport(e.target.value)}
           >
             <option value="Autobuz">Autobuz</option>
             <option value="Tramvai">Tramvai</option>
