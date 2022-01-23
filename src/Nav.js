@@ -28,11 +28,11 @@ function Nav() {
                             <li>Acasă</li>
                         </Link>
                         <Link className="link-item" to={"/experiente"} style={navStyleState[0]}>
-                            <div class="dropdown connct">
-                                <button class="dropbtn">Experiențe utilizatori</button>
+                            <div className="dropdown connct">
+                                <button className="dropbtn">Experiențe utilizatori</button>
 
                                 {
-                                    localStorage.length != 0 && <> <div class="dropdown-content"><Link className="link-item" to={"/experiente"} style={navStyleState[0]}>
+                                    localStorage.length != 0 && <> <div className="dropdown-content"><Link className="link-item" to={"/experiente"} style={navStyleState[0]}>
                                         <li>Listă experiențe</li>
                                     </Link><Link className="link-item" to={"/adaugaExperiente"} style={navStyleState[0]} >
                                             <li>Experiență nouă</li>
@@ -43,9 +43,9 @@ function Nav() {
                         </Link>
 
                         <Link className="link-item" to={"/logare"} style={navStyleState[0]}>
-                            <div class="dropdown">
-                                <button class="dropbtn-user"><BsPersonCircle /></button>
-                                <div class="dropdown-content toright">
+                            <div className="dropdown">
+                                <button className="dropbtn-user"><BsPersonCircle /></button>
+                                <div className="dropdown-content toright">
                                     {localStorage.length == 0 && <><Link className="link-item" to={"/logare"} style={navStyleState[0]}>
                                         <li>Autentifică</li>
                                     </Link>

@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
 
 async function resetPassword(credentials) {
-    let res = await fetch('http://localhost:3000/resetpassword', {
+    let res = await fetch('https://reactive-backend.herokuapp.com/resetpassword', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -20,10 +19,6 @@ async function resetPassword(credentials) {
     }
 }
 
-// async function test() {
-
-// }
-
 export default function ReseteazaParola({ setToken }) {
     const [username, setUserName] = useState();
 
@@ -33,13 +28,6 @@ export default function ReseteazaParola({ setToken }) {
             username
         });
     }
-
-    // const navigate = useNavigate();
-
-    // const routeChange = () => {
-    //     let path = `/logare`;
-    //     navigate(path);
-    // }
 
     return (
         <div className="login-wrapper">
@@ -56,7 +44,3 @@ export default function ReseteazaParola({ setToken }) {
         </div >
     )
 }
-
-ReseteazaParola.propTypes = {
-    setToken: PropTypes.func.isRequired
-};

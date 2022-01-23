@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from "react-router-dom";
 
 async function changeUser(credentials) {
-    console.log(credentials.password);
-    console.log(credentials.cpassword);
-    if (credentials.password == credentials.cpassword) {
+    if (credentials.password === credentials.cpassword) {
         let obj = {
             "username": localStorage.getItem("username"),
             "password": localStorage.getItem("password")
@@ -15,14 +12,14 @@ async function changeUser(credentials) {
         if (credentials.email)
             obj["email"] = credentials.email
         console.log(obj);
-        let res = await fetch('http://localhost:3000/user', {
+        let res = await fetch('https://reactive-backend.herokuapp.com/user', {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify(obj)
         })
-        if (res.status == 201)
+        if (res.status === 201)
             alert("Acțiune realizată cu succes!")
         else {
             console.log(res);
@@ -35,7 +32,7 @@ async function changeUser(credentials) {
 }
 
 async function deleteUser(credentials) {
-    let res = await fetch('http://localhost:3000/user', {
+    let res = await fetch('https://reactive-backend.herokuapp.com/user', {
         method: 'DELETE',
         headers: {
             'Content-Type': 'application/json'
@@ -45,7 +42,7 @@ async function deleteUser(credentials) {
             "password": localStorage.getItem("password")
         })
     })
-    if (res.status == 200)
+    if (res.status === 200)
         alert("Odată ce vă deconectați, contul va fi șters.")
     else {
         console.log(res);
@@ -54,14 +51,14 @@ async function deleteUser(credentials) {
 
 }
 
-export default function UpdateCont({ setToken }) {
+export default function UpdateCont() {
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
     const [cpassword, setCPassword] = useState();
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const token = await changeUser({
+        await changeUser({
             email,
             password,
             cpassword
@@ -94,7 +91,3 @@ export default function UpdateCont({ setToken }) {
         </div >
     )
 }
-
-UpdateCont.propTypes = {
-    setToken: PropTypes.func.isRequired
-};

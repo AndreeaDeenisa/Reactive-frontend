@@ -2,10 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 async function createUser(credentials) {
-    console.log(credentials.password);
-    console.log(credentials.cpassword);
-    if (credentials.password == credentials.cpassword) {
-        let res = await fetch('http://localhost:3000/user', {
+    if (credentials.password === credentials.cpassword) {
+        let res = await fetch('https://reactive-backend.herokuapp.com/user', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -16,7 +14,7 @@ async function createUser(credentials) {
                 "email": credentials.email
             })
         })
-        if (res.status == 200)
+        if (res.status === 200)
             alert("Verifica email-ul pentru activare")
         else {
             console.log(res);
@@ -29,7 +27,7 @@ async function createUser(credentials) {
 }
 
 
-export default function CreeazaCont({ setToken }) {
+export default function CreeazaCont() {
     const [username, setUserName] = useState();
     const [email, setEmail] = useState();
     const [password, setPassword] = useState();
@@ -37,7 +35,7 @@ export default function CreeazaCont({ setToken }) {
 
     const handleSubmit = async e => {
         e.preventDefault();
-        const token = await createUser({
+        await createUser({
             username,
             email,
             password,
@@ -72,7 +70,3 @@ export default function CreeazaCont({ setToken }) {
         </div >
     )
 }
-
-CreeazaCont.propTypes = {
-    setToken: PropTypes.func.isRequired
-};

@@ -20,7 +20,6 @@ function App() {
         <Route path="/logare" element={<Login />}></Route>
         <Route path="/reseteazaParola" element={<ReseteazaParola />}></Route>
         <Route path="/experiente" element={<Experiente />}></Route>
-        <Route path="/experiente/:experienteId" element={null}></Route>
         <Route path="/adaugaExperiente" element={<ExperientaNoua />}></Route>
       </Routes>
     </BrowserRouter>

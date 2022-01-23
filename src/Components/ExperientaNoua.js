@@ -52,7 +52,7 @@ function ExperientaNoua() {
       date.aglomeratie &&
       date.satisfactie
     ) {
-      fetch("http://localhost:3000/experiente", {
+      fetch("https://reactive-backend.herokuapp.com/experiente", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -69,7 +69,7 @@ function ExperientaNoua() {
         }),
       })
         .then(async (res) => {
-          if (res.status == 200) {
+          if (res.status === 200) {
             alert("Experienta a fost adaugata cu succes!");
             navigate("/");
           }

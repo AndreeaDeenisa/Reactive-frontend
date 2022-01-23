@@ -1,4 +1,3 @@
-import { Label } from "@material-ui/icons";
 import React, { useEffect, useState } from "react";
 
 const gradeSatisfactie = {
@@ -19,7 +18,7 @@ const gradeAglomerare = {
 
 function Experiente() {
   useEffect(() => {
-    fetch("http://localhost:3000/experiente")
+    fetch("https://reactive-backend.herokuapp.com/experiente")
       .then((response) => response.json())
       .then((data) => setExperiente(data));
   }, []);
@@ -93,7 +92,7 @@ function Experiente() {
   }
 
   return (
-    <div class="container">
+    <div className="container">
       <div>
         <input id="inputSearch"
           type="text"
